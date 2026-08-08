@@ -1,6 +1,7 @@
 package com.example.entity;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Cartao {
@@ -36,7 +37,7 @@ public class Cartao {
     public void exibirExtrato(){
         System.out.println("***********************************************");
         System.out.println("COMPRAS");
-        this.compras.forEach(System.out::println);
+        this.compras.stream().sorted().forEach(System.out::println);
         System.out.println("***********************************************");
         System.out.println("Limite Restante: "+ this.limite);
     }
