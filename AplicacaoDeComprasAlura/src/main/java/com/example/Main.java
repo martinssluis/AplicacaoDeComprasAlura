@@ -16,9 +16,9 @@ public class Main {
 
         int opcao = 1;
         do{
+            sc.nextLine(); // limpa o buffer que continha um \n no inicio
             System.out.print("Digite a descrição da compra: ");
             String descricaoCompra = sc.nextLine();
-            sc.nextLine();
             System.out.print("Digite o valor da compra: ");
             double valorCompra = sc.nextDouble();
             Compra compra = new Compra(descricaoCompra, valorCompra);
@@ -26,5 +26,9 @@ public class Main {
             System.out.print("Digite 0 para sair ou 1 para continuar: ");
             opcao = sc.nextInt();
         }while(opcao!=0);
+        if (opcao==0){
+            cartaoDeCretido.exibirExtrato();
+        }
+        sc.close();
     }
 }
