@@ -1,6 +1,6 @@
 package com.example.entity;
 
-public class Compra {
+public class Compra implements Comparable<Compra>{
     private String descricao;
     private Double valor;
 
@@ -22,5 +22,10 @@ public class Compra {
     @Override
     public String toString() {
         return "Compra - Descricao: "+ this.getDescricao() + " no valor de R$"+this.valor;
+    }
+
+    @Override
+    public int compareTo(Compra outraCompra) {
+        return outraCompra.getValor().compareTo(this.getValor());
     }
 }
