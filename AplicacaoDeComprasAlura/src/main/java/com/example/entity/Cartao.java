@@ -25,6 +25,7 @@ public class Cartao {
     public void realizarCompra(Compra compra){
         if (compra.getValor() > this.limite){
             System.out.print("Saldo insuficiente!");
+            exibirExtrato();
         }else {
             this.limite -= compra.getValor();
             this.compras.add(compra);
