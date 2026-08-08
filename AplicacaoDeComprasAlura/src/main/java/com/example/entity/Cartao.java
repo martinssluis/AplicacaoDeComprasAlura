@@ -32,5 +32,13 @@ public class Cartao {
         }
     }
 
+    public void exibirExtrato(){
+        System.out.println("***********************************************");
+        System.out.println("COMPRAS");
+        this.compras.forEach(System.out::println);
+        System.out.println("***********************************************");
+        System.out.println("Limite Restante: "+ this.limite);
+    }
+
     // tira setter para que apenas a propria classe altere o limite, com o setter, qualquer um poderia alterar o valor do limite
 }
