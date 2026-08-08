@@ -21,7 +21,6 @@ public class Compra {
 
     @Override
     public String toString() {
-        return "Compra : \n" +
-        "Descricao: "+this.descricao + " no valor de R$"+this.valor;
+        return "Compra - Descricao: "+ this.getDescricao() + " no valor de R$"+this.valor;
     }
 }
